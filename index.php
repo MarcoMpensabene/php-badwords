@@ -40,7 +40,7 @@ $censoredText = str_replace("$censoredWord" , " *** " , "$textParagraph");
             <h2>Length of the variable : <?php echo $stringLenght ?> </h2>
         </div>
         <form action="./index.php" method="GET">
-            <label for="censor-word">Insert the word you want to censor : </label>
+            <label for="censor-word">Insert the word you want to censor (CASE SENSITIVE!) : </label>
             <input type="text" name="censor-word" id="censor-word">
             <button type="submit">PRESS</button>
         </form>
