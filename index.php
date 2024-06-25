@@ -17,9 +17,9 @@ balzò in piedi, perché le era balenato nella mente che non aveva mai visto pri
 coniglio con un panciotto né tanto meno con un orologio dentro al taschino, e, bruciata
 dalla febbre della curiosità, lo inseguì di corsa attraverso il campo dove fece appena in
 tempo a vederlo sparire dentro una grossa tana sotto la siepe.";
-
+$censoredWord = $_GET["censor-word"];
 $stringLenght = strlen($textParagraph);
-// $cendoredText = str_replace("$_GET['censor-word']" , " *** " , "$textParagraph");
+$censoredText = str_replace("$censoredWord" , " *** " , "$textParagraph");
 
 ?>
 
@@ -47,8 +47,7 @@ $stringLenght = strlen($textParagraph);
 
         <div>
             <h1>CENSORED text : </h1>
-            <p><?php echo $cendoredText; ?>  </p>
-            <p><?php echo $_GET["censor-word"]; ?></p>
+            <p><?php echo $censoredText; ?>  </p>
         </div>
     </main>
     
