@@ -48,6 +48,7 @@ $censoredText = str_replace("$censoredWord" , " *** " , "$textParagraph");
         <div>
             <h1>CENSORED text : </h1>
             <p><?php echo $censoredText; ?>  </p>
+            <h2>Length of the censored text : <?php echo strlen($censoredText) ?> </h2>
         </div>
     </main>
     
