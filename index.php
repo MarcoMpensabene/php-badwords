@@ -37,7 +37,7 @@ $censoredText = str_replace("$censoredWord" , " *** " , "$textParagraph");
         <div>
             <h1>Text NOT censored : </h1>
             <p><?php echo $textParagraph; ?>  </p>
-            <h2>Length of the variable : <?php echo $stringLenght ?> </h2>
+            <h2>Length of the text : <?php echo $stringLenght ?> </h2>
         </div>
         <form action="./index.php" method="GET">
             <label for="censor-word">Insert the word you want to censor (CASE SENSITIVE!) : </label>
