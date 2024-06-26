@@ -17,10 +17,9 @@ balzò in piedi, perché le era balenato nella mente che non aveva mai visto pri
 coniglio con un panciotto né tanto meno con un orologio dentro al taschino, e, bruciata
 dalla febbre della curiosità, lo inseguì di corsa attraverso il campo dove fece appena in
 tempo a vederlo sparire dentro una grossa tana sotto la siepe.";
-$_GET["censor-word"] = isset($_GET["censor-word"]) ? $_GET["censor-word"] : "";
-$censoredWord = $_GET["censor-word"];
+$_POST["censor-word"] = isset($_POST["censor-word"]) ? $_POST["censor-word"] : "";
 $stringLenght = strlen($textParagraph);
-$censoredText = str_replace("$censoredWord" , " *** " , "$textParagraph");
+$censoredText = str_replace($_POST["censor-word"] , " *** " , $textParagraph);
 
 ?>
 
@@ -40,7 +39,7 @@ $censoredText = str_replace("$censoredWord" , " *** " , "$textParagraph");
             <p><?php echo $textParagraph; ?>  </p>
             <h2>Length of the text : <?php echo $stringLenght ?> </h2>
         </div>
-        <form action="./index.php" method="GET">
+        <form action="./index.php" method="POST">
             <label for="censor-word">Insert the word you want to censor (CASE SENSITIVE!) : </label>
             <input type="text" name="censor-word" id="censor-word">
             <button type="submit">PRESS</button>
